@@ -13,12 +13,12 @@ public class Json {
     private static String overView;
     private static String voteAverage;
     private static String releaseDate;
-    private static String RESULTS="results";
     private static String POSTER_PATH="poster_path";
     private static JSONArray jsonArray;
     public static String[] getData(String json){
         try {
             JSONObject jsonObject = new JSONObject(json);
+            String RESULTS = "results";
             if(jsonObject.has(RESULTS)) {
                 jsonArray = jsonObject.getJSONArray(RESULTS);
                 String[] images = new String[jsonArray.length()];

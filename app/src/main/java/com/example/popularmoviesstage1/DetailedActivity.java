@@ -21,7 +21,6 @@ public class DetailedActivity extends AppCompatActivity {
         TextView count = findViewById(R.id.id_rating);
         TextView overView = findViewById(R.id.id_overview);
         TextView releaseDate = findViewById(R.id.id_release_date);
-
         Intent intent = getIntent();
         title.setText(intent.getStringExtra(MainActivity.mainTitle));
         count.setText(intent.getStringExtra(MainActivity.voteCount));
@@ -31,5 +30,6 @@ public class DetailedActivity extends AppCompatActivity {
         String string = Network.buildImageString(str);
         Glide.with(this).load(string).into(imageView);
         setTitle(intent.getStringExtra(MainActivity.mainTitle));
+
     }
 }
